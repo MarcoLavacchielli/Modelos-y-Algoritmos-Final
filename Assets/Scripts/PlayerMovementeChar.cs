@@ -8,6 +8,7 @@ public class PlayerMovementeChar : MonoBehaviour
     public float jumpForce = 10f;
     public int maxJumps = 2;
 
+    [SerializeField] private Charview view;
     private Rigidbody rb;
     private int jumpsRemaining;
     private bool isWalking; //booleano para saber si me muevo
@@ -26,15 +27,25 @@ public class PlayerMovementeChar : MonoBehaviour
         float verticalInput = Input.GetAxisRaw("Vertical");
         Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
 
-        if (moveDirection != Vector3.zero) //Aca se mueve, aca podes meter la animacion y eso
+        if (moveDirection != Vector3.zero)
         {
-            isWalking = true;
-            //Debug.Log("me muevo");
+            float rotationSpeed = 15f;
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(newRotation);
+
+            if (moveDirection.magnitude > 0.1f)
+            {
+                view.Isrunning(true);
+            }
+            else
+            {
+                view.Isrunning(false);
+            }
         }
-        else  // Aca no
+        else if (moveDirection == Vector3.zero)
         {
-            isWalking = false;
-            //Debug.Log("me quedo quieto");
+            view.Isrunning(false);
         }
 
         rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
