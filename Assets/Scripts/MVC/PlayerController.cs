@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             float rotationSpeed = 15f;
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            Quaternion newRotation = Quaternion.Lerp(playerModel.rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            Quaternion newRotation = Quaternion.Slerp(playerModel.rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             playerModel.rb.MoveRotation(newRotation);
 
             playerView.UpdateMovement(moveDirection);

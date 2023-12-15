@@ -7,7 +7,6 @@ public class PlayerModel : MonoBehaviour
     public int maxJumps = 2;
 
     public Rigidbody rb;
-    public Animator myAnim;
 
     private void Start()
     {
