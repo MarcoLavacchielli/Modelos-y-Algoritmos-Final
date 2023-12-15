@@ -40,26 +40,21 @@ public class PlayerController : MonoBehaviour
             playerView.UpdateMovement(Vector3.zero);
         }
 
-        playerModel.rb.velocity = new Vector3(moveDirection.x * playerModel.speed, playerModel.rb.velocity.y, moveDirection.z * playerModel.speed);
+        playerModel.Move(moveDirection);
     }
 
     private void HandleJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpsRemaining > 0)
         {
-            Jump();
+            playerModel.Jump();
+            jumpsRemaining--;
+            playerView.UpdateJump(true);
         }
         else
         {
             playerView.UpdateJump(false);
         }
-    }
-
-    private void Jump()
-    {
-        playerModel.rb.velocity = new Vector3(playerModel.rb.velocity.x, playerModel.jumpForce, playerModel.rb.velocity.z);
-        jumpsRemaining--;
-        playerView.UpdateJump(true);
     }
 
     private void OnCollisionEnter(Collision collision)

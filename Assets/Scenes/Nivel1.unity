@@ -469,7 +469,6 @@ MonoBehaviour:
   jumpForce: 5
   maxJumps: 2
   rb: {fileID: 1653671585}
-  myAnim: {fileID: 1665858839}
 --- !u!114 &1653671589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,11 +481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a1ad6e5b75c6b47addb5a6e48a896f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1665858839 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8547481045582953291, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
-  m_PrefabInstance: {fileID: 2879019592563950654}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2879019592563950654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -798,5 +792,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2879019592070136481, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}

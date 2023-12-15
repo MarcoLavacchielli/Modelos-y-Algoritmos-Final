@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerView : MonoBehaviour
 {
-    public Charview view;
+    [SerializeField] private Charview view;
 
     public void UpdateMovement(Vector3 moveDirection)
     {
