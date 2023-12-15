@@ -49,11 +49,13 @@ public class PlayerMovementeChar : MonoBehaviour
 
         rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
 
-        // Salto, aca podrias frenar la animacion de movimiento, y la de salto la haces en la funcion de salto
         if (Input.GetKeyDown(KeyCode.Space) && jumpsRemaining > 0)
         {
             Jump();
-            view.Isjumping(true);
+        }
+        else
+        {
+            view.Isjumping(false);
         }
     }
 
@@ -61,8 +63,7 @@ public class PlayerMovementeChar : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         jumpsRemaining--;
-
-        // Puedes reiniciar los saltos al tocar el suelo u otra condición, fijate si podes agregar la animacion por aca
+        view.Isjumping(true);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -71,8 +72,6 @@ public class PlayerMovementeChar : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             jumpsRemaining = maxJumps;
-            view.Isjumping(false);
-            //Aca terminaria la animacion de salto
         }
     }
 }
