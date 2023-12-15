@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMovementeChar : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
-    public int maxJumps = 2;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float jumpForce = 10f;
+    private int maxJumps = 1;
 
-    public Animator myAnim;
+    [SerializeField] private Animator myAnim;
     [SerializeField] private Charview view;
     private Rigidbody rb;
     private int jumpsRemaining;

@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 10
-  maxJumps: 2
+  jumpForce: 7
+  maxJumps: 1
   myAnim: {fileID: 8547481045582953291}
   view: {fileID: 2879019592070136478}
 --- !u!114 &2879019592070136478
