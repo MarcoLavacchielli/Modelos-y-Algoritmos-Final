@@ -12,8 +12,6 @@ public class PlayerMovementeChar : MonoBehaviour
     [SerializeField] private Charview view;
     private Rigidbody rb;
     private int jumpsRemaining;
-    private bool isWalking; //booleano para saber si me muevo
-    private bool isJumping; //booleano para saber si salto
 
     private void Start()
     {
