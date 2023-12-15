@@ -15,4 +15,8 @@ public class Charview : MonoBehaviour
     {
         myAnim.SetBool("isrunning", running);
     }
+    public void Isjumping(bool jumping)
+    {
+        myAnim.SetBool("isjumping", jumping);
+    }
 }

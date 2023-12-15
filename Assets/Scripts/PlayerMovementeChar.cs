@@ -8,6 +8,7 @@ public class PlayerMovementeChar : MonoBehaviour
     public float jumpForce = 10f;
     public int maxJumps = 2;
 
+    public Animator myAnim;
     [SerializeField] private Charview view;
     private Rigidbody rb;
     private int jumpsRemaining;
@@ -54,7 +55,7 @@ public class PlayerMovementeChar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && jumpsRemaining > 0)
         {
             Jump();
-            isJumping = true;
+            view.Isjumping(true);
         }
     }
 
@@ -72,7 +73,7 @@ public class PlayerMovementeChar : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             jumpsRemaining = maxJumps;
-            isJumping = false;
+            view.Isjumping(false);
             //Aca terminaria la animacion de salto
         }
     }

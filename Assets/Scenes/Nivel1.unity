@@ -630,6 +630,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 10
   maxJumps: 2
+  myAnim: {fileID: 1504805606}
   view: {fileID: 1653671584}
 --- !u!114 &1653671584
 MonoBehaviour:
