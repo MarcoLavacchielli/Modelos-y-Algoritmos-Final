@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     {
         playerModel = GetComponent<PlayerModel>();
         playerView = GetComponent<PlayerView>();
+        PlayerLifeMemento initialMemento = playerModel.CreateMemento();
+        playerModel.RestoreFromMemento(initialMemento);
         jumpsRemaining = playerModel.maxJumps;
     }
 
@@ -22,6 +24,25 @@ public class PlayerController : MonoBehaviour
 
         HandleMovement(moveDirection);
         HandleJump();
+
+        // Simulación de daño al jugador durante el juego
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerModel.TakeDamage(10);
+        }
+
+        // Simulación de recuperación de vida (por ejemplo, al presionar una tecla)
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Crear un nuevo memento antes de realizar la recuperación de vida
+            PlayerLifeMemento recoveryMemento = playerModel.CreateMemento();
+
+            // Simular recuperación de vida (esto puede ser un valor específico o basado en algún cálculo)
+            playerModel.RecoverLife(15);
+
+            // Puedes guardar el memento después de realizar la recuperación de vida si quieres soportar deshacer (undo)
+            // En este ejemplo, no lo estamos utilizando, pero podría ser útil en ciertos contextos.
+        }
     }
 
     private void HandleMovement(Vector3 moveDirection)
