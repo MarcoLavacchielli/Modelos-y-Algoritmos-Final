@@ -12,7 +12,7 @@ public class LocalizationManager : MonoBehaviour
 
     public event Action OnLocalizationChanged;
 
-    [SerializeField] private Langauges[] langs;
+    [SerializeField] private Languages[] langs;
 
     private void Awake()
     {
@@ -49,6 +49,9 @@ public class LocalizationManager : MonoBehaviour
     }
 
     [SerializeField]
-    private class
+    private class Languages
+    {
+
+    }
 
 }
