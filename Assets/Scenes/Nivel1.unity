@@ -519,8 +519,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
-      propertyPath: enemyTypeToSpawn
-      value: 0
+      propertyPath: spawnPositionType1.z
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1686613690681653171, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: m_Name
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1686613690681653183, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.94
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1686613690681653183, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: m_LocalRotation.w

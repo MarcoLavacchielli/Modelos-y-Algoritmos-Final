@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public EnemyFactory enemyFactoryPrefab;
     public GameObject playerCheckerPrefab;
 
-    public void SpawnEnemy(EnemyType enemyType)
+    public void SpawnEnemy(EnemyType enemyType, Vector3 spawnPosition)
     {
         if (enemyFactoryPrefab == null)
         {
@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
 
         if (enemyFactoryPrefab != null)
         {
-            Debug.Log("Spawning enemy...");
-            enemyFactoryPrefab.SpawnEnemy(enemyType, Vector3.zero);
+            Debug.Log("Spawning enemy at position: " + spawnPosition);
+            enemyFactoryPrefab.SpawnEnemy(enemyType, spawnPosition);
         }
         else
         {

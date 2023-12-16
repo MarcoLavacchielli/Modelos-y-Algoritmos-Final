@@ -26,7 +26,7 @@ public class EnemyFactory : MonoBehaviour
 
             if (spawnedEnemy != null)
             {
-                Debug.Log("Enemy spawned: " + enemyType);
+                Debug.Log("Enemy spawned: " + enemyType + " at position: " + spawnPosition);
             }
             else
             {
