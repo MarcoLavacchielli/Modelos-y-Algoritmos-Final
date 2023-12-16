@@ -4094,7 +4094,7 @@ GameObject:
   - component: {fileID: 1182875698}
   - component: {fileID: 1182875697}
   m_Layer: 0
-  m_Name: LocalizationManager
+  m_Name: Localization Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4112,7 +4112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbc0dd3f7ba3e4478a3b8d98be7ef55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultLanguage: SPA
+  defaultLanguageFolder: ES_LA
+  localizationFolders: 
+  localizationFile: 
 --- !u!4 &1182875698
 Transform:
   m_ObjectHideFlags: 0
