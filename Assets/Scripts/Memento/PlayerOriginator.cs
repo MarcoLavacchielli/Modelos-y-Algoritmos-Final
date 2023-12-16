@@ -26,9 +26,9 @@ public class PlayerOriginator : MonoBehaviour
 
     public class PlayerMemento
     {
-        public float x;
-        public float y;
-        public float z;
+        private float x;
+        private float y;
+        private float z;
 
         public PlayerMemento(Transform playerTransform)
         {

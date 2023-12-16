@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float currentHealth;
-    private float maxHealth = 5f;
+    private int currentHealth;
+    [SerializeField] private int maxHealth = 5;
     //public event Action<float> OnHealthChange;
 
     //[SerializeField] private ParticleSystem damageP;
@@ -15,14 +15,22 @@ public class PlayerHealth : MonoBehaviour
     //[SerializeField] private Checkpoint checkpoint;
 
 
-    //[SerializeField] private PlayerOriginator playerOriginator;
+    [SerializeField] private PlayerOriginator playerOriginator;
     //
-    //private PlayerOriginator.PlayerMemento savedmemento;
+    private PlayerOriginator.PlayerMemento savedmemento;
 
     private void Awake()
     {
-        //this.savedmemento = playerOriginator.Save();
+        this.savedmemento = playerOriginator.Save();
         //Debug.Log("buena salvada");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            TakeDamage(7);
+        }
     }
 
     public float CurrentHealth
@@ -44,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }*/
 
-    public void Health(float healthAmout)
+    public void Health(int healthAmout)
     {
         currentHealth += healthAmout;
 
@@ -53,10 +61,10 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 5;
         }
 
-       //NotifyObservers();
+        //NotifyObservers();
     }
 
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
         //damageP.Play();
@@ -97,11 +105,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void Respawn()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
+        playerOriginator.Restore(savedmemento);
+        Debug.Log("Memento restored"); 
         currentHealth = maxHealth;
         //NotifyObservers();
-        //playerOriginator.Restore(savedmemento);
-        //Debug.Log("Memento restored"); 
         //Debug.Log("cargado");
     }
 
@@ -110,12 +118,20 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChange?.Invoke(currentHealth);
     }*/
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             float damageAmount = 1f;
             TakeDamage(damageAmount);
+        }
+    }*/
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("CheckPoint"))
+        {
+            this.savedmemento = playerOriginator.Save();
         }
     }
 }
