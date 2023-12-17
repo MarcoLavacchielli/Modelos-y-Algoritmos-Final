@@ -42,18 +42,6 @@ public class LocalizationManager : MonoBehaviour
         SetLanguageAs(defaultLanguageFolder);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            SetLanguageAs("EN_US");
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            SetLanguageAs("ES_LA");
-        }
-    }
-
     public void SetLanguageAs(string languageFolder)
     {
 
@@ -121,7 +109,7 @@ public class LocalizationManager : MonoBehaviour
             {
                 string[] parts = lines[i].Split(';');
                 //Debug.Log($"Key {parts[0]} value {parts[1]}"); // printea
-                textTable.Add(parts[0], parts[1]); // Asegúrate de agregar las claves y valores a la tabla.
+                textTable.Add(parts[0], parts[1]); // Mucho muy importante no borrar, porque sin esto no funca esto
             }
         }
 
@@ -137,6 +125,16 @@ public class LocalizationManager : MonoBehaviour
                 return key;
             }
         }
+    }
+
+    public void ChangeToSp()
+    {
+        SetLanguageAs("ES_LA");
+    }
+
+    public void ChangeToEn()
+    {
+        SetLanguageAs("EN_US");
     }
 
 }
