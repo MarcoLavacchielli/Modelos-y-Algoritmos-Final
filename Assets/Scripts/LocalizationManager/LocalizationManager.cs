@@ -1,7 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.WSA;
 
 public class LocalizationManager : MonoBehaviour
 {
@@ -35,6 +40,18 @@ public class LocalizationManager : MonoBehaviour
         DontDestroyOnLoad(Instance);
 
         SetLanguageAs(defaultLanguageFolder);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SetLanguageAs("EN_US");
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            SetLanguageAs("ES_LA");
+        }
     }
 
     public void SetLanguageAs(string languageFolder)
@@ -95,6 +112,17 @@ public class LocalizationManager : MonoBehaviour
             folder = languageFolder;
 
             TextAsset asset = Resources.Load<TextAsset>($"{localizationFolders}{languageFolder}/{localizationFile}");
+
+            //
+            string[] lines = asset.text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+            // 1 porque van los titulos y salteamos eso
+            for (int i = 1; i < lines.Length; i++)
+            {
+                string[] parts = lines[i].Split(';');
+                //Debug.Log($"Key {parts[0]} value {parts[1]}"); // printea
+                textTable.Add(parts[0], parts[1]); // Asegúrate de agregar las claves y valores a la tabla.
+            }
         }
 
         public string TranslateText(string key)
