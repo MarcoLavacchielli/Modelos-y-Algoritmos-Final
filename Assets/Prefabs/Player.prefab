@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 3150635956088378664}
   - component: {fileID: 7182979001120684260}
   - component: {fileID: 4210250218826785915}
+  - component: {fileID: 9162939360041664512}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -182,6 +183,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   playerOriginator: {fileID: 7182979001120684260}
+--- !u!114 &9162939360041664512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2879019592070136486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08513950de26081409fa42234c6ff0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 2
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  danio: 1
 --- !u!1 &2879019592854804917
 GameObject:
   m_ObjectHideFlags: 0
