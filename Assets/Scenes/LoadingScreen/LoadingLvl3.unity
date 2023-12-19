@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraProgreso: {fileID: 1875800713}
-  nombreEscena: MainMenu
+  nombreEscena: Nivel3
 --- !u!4 &670516154
 Transform:
   m_ObjectHideFlags: 0
