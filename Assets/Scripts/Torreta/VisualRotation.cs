@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class VisualRotation : MonoBehaviour
 {
-    [SerializeField] private Transform _target;
+    private Transform _target;
+
+    void Start()
+    {
+        // Busco al player
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            // Encuentra el objeto
+            _target = player.transform.Find("AimSpot");
+        }
+        else
+        {
+            Debug.LogError("Falla al encontrar");
+        }
+    }
 
     void Update()
     {

@@ -42,19 +42,23 @@ public class Bullet : MonoBehaviour, IBullet
         //PlayBulletDestroyParticles(initialPosition);
     }
 
-    /*private void OnCollisionEnter(Collision collision) // Se desactiva la bala cuando colisiona con algo
+    private void OnCollisionEnter(Collision collision) // Se desactiva la bala cuando colisiona con algo
     {
-        if (collision.gameObject.TryGetComponent(out IDamage enemy))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            enemy.TakeDamage((int)damage);
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(1);
+            }
         }
 
         StopCoroutine(ReturnAfterSeconds(3f));
         gameObject.SetActive(false);
         pool.Return(this);
 
-        PlayBulletDestroyParticles(collision.contacts[0].point);
-    }*/
+        //PlayBulletDestroyParticles(collision.contacts[0].point);
+    }
 
     /*private void PlayBulletDestroyParticles(Vector3 position)
     {

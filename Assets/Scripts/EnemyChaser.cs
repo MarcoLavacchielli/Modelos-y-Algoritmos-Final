@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyChaser : MonoBehaviour
 {
 
-    [SerializeField] private Transform player;
+    private Transform player;
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float chaseRange = 5f;
     [SerializeField] private float chaseSpeed = 3f;
@@ -16,6 +16,18 @@ public class EnemyChaser : MonoBehaviour
     private void Start()
     {
         ogPosition = transform.position;
+
+        GameObject playerPosition = GameObject.FindWithTag("Player");
+
+        if (playerPosition != null)
+        {
+            // Asigno automaticamente al player
+            player = playerPosition.transform;
+        }
+        else
+        {
+            Debug.Log("Falla al encontrar");
+        }
     }
 
     private void Update()

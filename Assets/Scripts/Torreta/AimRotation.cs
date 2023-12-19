@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class AimRotation : MonoBehaviour
 {
-    [SerializeField] private Transform _target;
+    private Transform _target;
+
+    void Start()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            _target = player.transform.Find("AimSpot");
+        }
+        else
+        {
+            Debug.LogError("Falla al encontrar");
+        }
+    }
 
     void Update()
     {

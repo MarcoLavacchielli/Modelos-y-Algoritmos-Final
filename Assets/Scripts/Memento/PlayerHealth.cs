@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int currentHealth;
     [SerializeField] private int maxHealth = 5;
-    //public event Action<float> OnHealthChange;
+    public event Action<float> OnHealthChange;
 
     //[SerializeField] private ParticleSystem damageP;
 
@@ -33,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        //NotifyObservers();
+        NotifyObservers();
     }
 
     /*private void Update()
@@ -53,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        //NotifyObservers();
+        NotifyObservers();
     }
 
     public void TakeDamage(int damageAmount)
@@ -92,7 +93,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Respawn();
+            NotifyObservers();
         }
+        NotifyObservers();
     }
 
     private void Respawn()
@@ -101,14 +104,14 @@ public class PlayerHealth : MonoBehaviour
         playerOriginator.Restore(savedmemento);
         Debug.Log("Memento restored"); 
         currentHealth = maxHealth;
-        //NotifyObservers();
+        NotifyObservers();
         //Debug.Log("cargado");
     }
 
-    /*private void NotifyObservers()
+    private void NotifyObservers()
     {
         OnHealthChange?.Invoke(currentHealth);
-    }*/
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PowerUpHealth : MonoBehaviour
 {
-
-    [SerializeField] private PlayerHealth playerHp;
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            playerHp.Health(1);
-            Destroy(gameObject);
-        }
+        other.GetComponent<PlayerHealth>().Health(1);
+        Destroy(gameObject);
     }
 }

@@ -11,20 +11,19 @@ public class FireBullets : MonoBehaviour
     [SerializeField] private int _counter; // Esto está comentado en el for pero es un límite de balas
     [SerializeField] private int _maxCounter = 20;
 
-    [SerializeField] private Transform _player;
+    private Transform _player;
     private Coroutine _fireCoroutine;
 
     //public ParticleSystem dustTiro;
 
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform shootController;
-    [SerializeField] private Rigidbody rb;
     private Pool<IBullet> bulletsPool = new Pool<IBullet>();
 
     //
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
 
         for (int i = 0; i < 12; i++)   //instancia 12 balas que son las de la bolsa
         {
@@ -34,6 +33,17 @@ public class FireBullets : MonoBehaviour
         }
     }
     //
+
+    private void Start()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+
+        if (player != null)
+        {
+            // Encuentra el objeto
+            _player = player.transform;
+        }
+    }
 
     void Update()
     {

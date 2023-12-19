@@ -6,6 +6,11 @@ public class EnemyPatroller : MonoBehaviour
 {
     [SerializeField] private float speed =5f;
 
+    private void Start()
+    {
+        transform.Rotate(0f, 90f, 0f);
+    }
+
     private void Update()
     {
         Move();

@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class PowerUpDamage : MonoBehaviour
 {
-    [SerializeField] private GameObserver gameObserver;
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Avisa al observador para aumentar el daño
-            gameObserver.IncreaseDamage(1);
-
-            // Destruye el power-up
-            Destroy(gameObject);
-        }
+        other.GetComponent<GameObserver>().IncreaseDamage(1);
+        Destroy(gameObject);
     }
 }
