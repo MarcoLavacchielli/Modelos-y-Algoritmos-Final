@@ -25,14 +25,6 @@ public class PlayerHealth : MonoBehaviour
         //Debug.Log("buena salvada");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            TakeDamage(7);
-        }
-    }
-
     public float CurrentHealth
     {
         get { return currentHealth; }
