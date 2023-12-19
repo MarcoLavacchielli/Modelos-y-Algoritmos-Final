@@ -8,10 +8,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     public int danio;
 
-    private void Awake()
-    {
-        danio = 1;
-    }
+    [SerializeField] private GameObserver gameObserver;
 
     // Update is called once per frame
     void Update()
@@ -47,5 +44,23 @@ public class PlayerAttack : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRadius);
+    }
+
+    private void OnEnable()
+    {
+        // Suscribe al evento cuando el objeto está activo
+        gameObserver.DamageChanged += HandleDamageChanged;
+    }
+
+    private void OnDisable()
+    {
+        // Desuscribe al evento cuando el objeto se desactiva para evitar pérdida de referencia
+        gameObserver.DamageChanged -= HandleDamageChanged;
+    }
+
+    private void HandleDamageChanged(int amount)
+    {
+        // Actualiza el daño según el evento recibido
+        danio += amount;
     }
 }

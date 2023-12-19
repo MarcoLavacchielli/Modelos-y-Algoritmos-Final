@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int currentHealth;
+    [SerializeField] private int currentHealth;
     [SerializeField] private int maxHealth = 5;
     //public event Action<float> OnHealthChange;
 
@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth > 5)
         {
-            currentHealth = 5;
+            currentHealth = maxHealth;
         }
 
         //NotifyObservers();
@@ -118,14 +118,14 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChange?.Invoke(currentHealth);
     }*/
 
-    /*private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            float damageAmount = 1f;
+            int damageAmount = 1;
             TakeDamage(damageAmount);
         }
-    }*/
+    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 7182979001120684260}
   - component: {fileID: 4210250218826785915}
   - component: {fileID: 9162939360041664512}
+  - component: {fileID: 2912648702300818271}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -145,6 +146,7 @@ MonoBehaviour:
   jumpForce: 5
   maxJumps: 2
   rb: {fileID: 2879019592070136484}
+  gameObserver: {fileID: 2912648702300818271}
 --- !u!114 &3150635956088378664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4ff0d27f771de48aaf85652f99fccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   maxHealth: 5
   playerOriginator: {fileID: 7182979001120684260}
 --- !u!114 &9162939360041664512
@@ -200,6 +203,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   danio: 1
+  gameObserver: {fileID: 2912648702300818271}
+--- !u!114 &2912648702300818271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2879019592070136486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791a2dcfd2760ce4b98dd1c72bd8ae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2879019592854804917
 GameObject:
   m_ObjectHideFlags: 0
