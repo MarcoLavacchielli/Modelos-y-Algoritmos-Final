@@ -20,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
     //
     private PlayerOriginator.PlayerMemento savedmemento;
 
+    public bool failed = false;
+
     private void Awake()
     {
         this.savedmemento = playerOriginator.Save();
@@ -37,13 +39,15 @@ public class PlayerHealth : MonoBehaviour
         NotifyObservers();
     }
 
-    /*private void Update()
+    private void Update()
     {
-        if (maxHealth > 5)
+        if (failed == true)
         {
-            maxHealth = 5;
+            playerOriginator.Restore(savedmemento);
+            failed = false;
+            TakeDamage(1);
         }
-    }*/
+    }
 
     public void Health(int healthAmout)
     {
@@ -95,15 +99,16 @@ public class PlayerHealth : MonoBehaviour
             Respawn();
             NotifyObservers();
         }
+
         NotifyObservers();
     }
 
     private void Respawn()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
-        playerOriginator.Restore(savedmemento);
-        Debug.Log("Memento restored"); 
-        currentHealth = maxHealth;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
+        //playerOriginator.Restore(savedmemento);
+        //Debug.Log("Memento restored"); 
+        //currentHealth = maxHealth;
         NotifyObservers();
         //Debug.Log("cargado");
     }
