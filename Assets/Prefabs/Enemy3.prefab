@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: 2
-  _range: 5
+  _range: 10
   _counter: 0
   _maxCounter: 20
   bulletPrefab: {fileID: 2496609296651411904, guid: 38ff2c7ec34a8b1409178ea401248542, type: 3}
