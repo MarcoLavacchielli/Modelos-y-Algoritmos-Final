@@ -342,53 +342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29840746}
   m_CullTransparentMesh: 1
---- !u!1 &37076351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 37076353}
-  - component: {fileID: 37076352}
-  m_Layer: 0
-  m_Name: Localization Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &37076352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37076351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbc0dd3f7ba3e4478a3b8d98be7ef55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultLanguageFolder: ES_LA
-  localizationFolders: Localizations/
-  localizationFile: TranslationTable
---- !u!4 &37076353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37076351}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39221459
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +791,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &117522280
 GameObject:
@@ -1947,6 +1900,7 @@ GameObject:
   - component: {fileID: 215605607}
   - component: {fileID: 215605609}
   - component: {fileID: 215605608}
+  - component: {fileID: 215605610}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2071,6 +2025,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215605606}
   m_CullTransparentMesh: 1
+--- !u!114 &215605610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215605606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bb3cd3ce5bf4843ac34e05466654df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: VICTORY
 --- !u!1001 &220133681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3320,8 +3287,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 37076352}
-        m_TargetAssemblyTypeName: LocalizationManager, Assembly-CSharp
+      - m_Target: {fileID: 1968192317}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ChangeToSp
         m_Mode: 1
         m_Arguments:
@@ -5318,6 +5285,7 @@ GameObject:
   - component: {fileID: 742200275}
   - component: {fileID: 742200277}
   - component: {fileID: 742200276}
+  - component: {fileID: 742200278}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5442,6 +5410,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742200274}
   m_CullTransparentMesh: 1
+--- !u!114 &742200278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742200274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bb3cd3ce5bf4843ac34e05466654df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MAINMENU
 --- !u!1 &766640949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6138,7 +6119,7 @@ RectTransform:
   m_Children:
   - {fileID: 379304777}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6265,7 +6246,7 @@ Transform:
   - {fileID: 808550020}
   - {fileID: 2061654128}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873365413
 GameObject:
@@ -6587,7 +6568,7 @@ RectTransform:
   m_Children:
   - {fileID: 29840747}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8525,6 +8506,7 @@ GameObject:
   - component: {fileID: 1151114149}
   - component: {fileID: 1151114151}
   - component: {fileID: 1151114150}
+  - component: {fileID: 1151114152}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -8649,6 +8631,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151114148}
   m_CullTransparentMesh: 1
+--- !u!114 &1151114152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151114148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bb3cd3ce5bf4843ac34e05466654df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: DEFEAT
 --- !u!1001 &1179827408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10164,6 +10159,7 @@ GameObject:
   - component: {fileID: 1443822005}
   - component: {fileID: 1443822007}
   - component: {fileID: 1443822006}
+  - component: {fileID: 1443822008}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10288,6 +10284,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443822004}
   m_CullTransparentMesh: 1
+--- !u!114 &1443822008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443822004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bb3cd3ce5bf4843ac34e05466654df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TRYAGAIN
 --- !u!1 &1444315136
 GameObject:
   m_ObjectHideFlags: 0
@@ -10547,7 +10556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450553449
 GameObject:
@@ -11254,7 +11263,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518202254
 GameObject:
@@ -12676,7 +12685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1653671582 stripped
 Transform:
@@ -13540,6 +13549,7 @@ GameObject:
   - component: {fileID: 1819633301}
   - component: {fileID: 1819633303}
   - component: {fileID: 1819633302}
+  - component: {fileID: 1819633304}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -13664,6 +13674,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819633300}
   m_CullTransparentMesh: 1
+--- !u!114 &1819633304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819633300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bb3cd3ce5bf4843ac34e05466654df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: NEXT
 --- !u!1 &1826965566
 GameObject:
   m_ObjectHideFlags: 0
@@ -13735,7 +13758,7 @@ Transform:
   m_Children:
   - {fileID: 1078638435}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841771246
 GameObject:
@@ -14766,8 +14789,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 37076352}
-        m_TargetAssemblyTypeName: LocalizationManager, Assembly-CSharp
+      - m_Target: {fileID: 1968192317}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ChangeToEn
         m_Mode: 1
         m_Arguments:

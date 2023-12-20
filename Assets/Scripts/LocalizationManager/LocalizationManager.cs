@@ -32,7 +32,7 @@ public class LocalizationManager : MonoBehaviour
         if(Instance != null)
         {
             Debug.Log($"Can only have one {nameof(LocalizationManager)}.");
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
 

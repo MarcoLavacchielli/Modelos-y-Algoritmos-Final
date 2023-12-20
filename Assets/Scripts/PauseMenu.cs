@@ -37,4 +37,20 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f; // Reanudar el tiempo en el juego
         SceneManager.LoadScene(scenename);
     }
+
+    public void ChangeToSp()
+    {
+        if (LocalizationManager.Instance != null)
+        {
+            LocalizationManager.Instance.SetLanguageAs("ES_LA");
+        }
+    }
+
+    public void ChangeToEn()
+    {
+        if (LocalizationManager.Instance != null)
+        {
+            LocalizationManager.Instance.SetLanguageAs("EN_US");
+        }
+    }
 }

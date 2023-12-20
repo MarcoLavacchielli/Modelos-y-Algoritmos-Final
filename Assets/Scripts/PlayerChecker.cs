@@ -27,6 +27,7 @@ public class PlayerChecker : MonoBehaviour
             Vector3 spawnPosition = GetSpawnPosition(enemyTypeToSpawn);
             Debug.Log("Player detected. Enemy type to spawn: " + enemyTypeToSpawn);
             gameManager.SpawnEnemy(enemyTypeToSpawn, spawnPosition);
+            Destroy(gameObject); // destruir el checkpoint para evitar que cree varios enemigos
         }
     }
 
