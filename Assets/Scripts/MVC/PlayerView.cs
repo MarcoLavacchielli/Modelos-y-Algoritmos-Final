@@ -6,7 +6,6 @@ public class PlayerView : MonoBehaviour
 
     public void UpdateMovement(Vector3 moveDirection)
     {
-        // Handle movement visualization here (animation, etc.)
         if (moveDirection.magnitude > 0.1f)
         {
             view.Isrunning(true);
@@ -19,7 +18,6 @@ public class PlayerView : MonoBehaviour
 
     public void UpdateJump(bool isJumping)
     {
-        // Handle jump visualization here (animation, etc.)
         view.Isjumping(isJumping);
     }
 }

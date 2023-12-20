@@ -242,6 +242,7 @@ MonoBehaviour:
   danio: 1
   gameObserver: {fileID: 2912648702300818271}
   attackPs: {fileID: 7450782473789217356}
+  view: {fileID: 2879019592070136478}
   cooldown: 0.5
 --- !u!114 &2912648702300818271
 MonoBehaviour:

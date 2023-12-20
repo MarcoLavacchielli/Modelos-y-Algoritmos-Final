@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -7,10 +6,13 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float attackRadius = 1.5f;
     [SerializeField] private LayerMask enemyLayer;
     public int danio;
+    private bool isAttacking = false;
 
     [SerializeField] private GameObserver gameObserver;
 
     [SerializeField] private ParticleSystem attackPs;
+
+    [SerializeField] private Charview view;
 
     [SerializeField] private float cooldown = 0.5f;
     private float nextAttackTime = 0f;
@@ -18,11 +20,27 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
+        if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime && !isAttacking)
         {
-            Attack();
+            isAttacking = true;
+            StartCoroutine(PerformAttack());
             nextAttackTime = Time.time + cooldown;
         }
+    }
+
+    IEnumerator PerformAttack()
+    {
+        view.Iskicking(true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Attack();
+
+        yield return new WaitForSeconds(0.5f);
+
+        view.Iskicking(false);
+
+        isAttacking = false;
     }
 
     void Attack()
