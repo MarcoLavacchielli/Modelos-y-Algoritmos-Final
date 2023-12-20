@@ -29,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
     {
         Collider[] hitEnemies = Physics.OverlapSphere(transform.position, attackRadius, enemyLayer);
         attackPs.Play();
+        AudioManager.Instance.PlaySFX(1);
 
         foreach (Collider enemy in hitEnemies)
         {

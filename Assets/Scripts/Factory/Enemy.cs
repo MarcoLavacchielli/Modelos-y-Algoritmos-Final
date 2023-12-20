@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public int health = 1;
     public int damage = 1;
-    //public float speed = 1f;
+    public float speed = 1f;
 
     protected virtual void Start()
     {

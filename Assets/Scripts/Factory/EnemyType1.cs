@@ -10,6 +10,6 @@ public class EnemyType1 : Enemy
         base.InitializeStats();
         health = 2;
         damage = 1;
-        //speed = 3f;
+        speed = 5f;
     }
 }

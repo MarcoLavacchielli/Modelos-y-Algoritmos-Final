@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class EnemyPatroller : MonoBehaviour
 {
-    [SerializeField] private float speed =5f;
+    //[SerializeField] private float speed = 5f;
+    private float speed;
 
     private void Start()
     {
+        EnemyType1 enemyType1Component = GetComponent<EnemyType1>();
+        if (enemyType1Component != null)
+        {
+            speed = enemyType1Component.speed;
+        }
+        else
+        {
+            Debug.LogWarning("Error al encontrar");
+        }
+
         transform.Rotate(0f, 90f, 0f);
     }
 

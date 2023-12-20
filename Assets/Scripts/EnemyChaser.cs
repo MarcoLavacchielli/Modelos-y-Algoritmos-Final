@@ -8,13 +8,24 @@ public class EnemyChaser : MonoBehaviour
     private Transform player;
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float chaseRange = 5f;
-    [SerializeField] private float chaseSpeed = 3f;
+    private float chaseSpeed;
     [SerializeField] private float returnSpeed = 1f;
 
     private Vector3 ogPosition;
 
     private void Start()
     {
+
+        EnemyType2 enemyType2Component = GetComponent<EnemyType2>();
+        if (enemyType2Component != null)
+        {
+            chaseSpeed = enemyType2Component.speed;
+        }
+        else
+        {
+            Debug.LogWarning("Error al encontrar");
+        }
+
         ogPosition = transform.position;
 
         GameObject playerPosition = GameObject.FindWithTag("Player");

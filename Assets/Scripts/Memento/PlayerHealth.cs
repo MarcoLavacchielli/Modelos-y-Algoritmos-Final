@@ -130,17 +130,17 @@ public class PlayerHealth : MonoBehaviour
             if (enemy is EnemyType1)
             {
                 damageAmount = ((EnemyType1)enemy).damage;
-                Debug.Log(damageAmount + " 1");
+                //Debug.Log(damageAmount + " 1");
             }
             else if (enemy is EnemyType2)
             {
                 damageAmount = ((EnemyType2)enemy).damage;
-                Debug.Log(damageAmount + " 2");
+                //Debug.Log(damageAmount + " 2");
             }
             else if (enemy is EnemyType3)
             {
                 damageAmount = ((EnemyType3)enemy).damage;
-                Debug.Log(damageAmount + " 3");
+                //Debug.Log(damageAmount + " 3");
             }
 
             // Aplica el daño al jugador
