@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
 
     public bool failed = false;
 
+    [SerializeField] private GameObject loseCanvas;
+
     private void Awake()
     {
         this.savedmemento = playerOriginator.Save();
@@ -105,12 +107,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Respawn()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
-        //playerOriginator.Restore(savedmemento);
-        //Debug.Log("Memento restored"); 
-        //currentHealth = maxHealth;
-        NotifyObservers();
-        //Debug.Log("cargado");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
+        //NotifyObservers();
+        loseCanvas.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     private void NotifyObservers()

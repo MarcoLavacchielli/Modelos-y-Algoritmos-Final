@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 16497645}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 888953833}
+        m_TargetAssemblyTypeName: LoseCanvas, Assembly-CSharp
+        m_MethodName: TryAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &16497645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6492,6 +6504,7 @@ GameObject:
   - component: {fileID: 888953831}
   - component: {fileID: 888953830}
   - component: {fileID: 888953829}
+  - component: {fileID: 888953833}
   m_Layer: 5
   m_Name: Canvas (Lose)
   m_TagString: Untagged
@@ -6581,6 +6594,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &888953833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888953828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d36ea4e5dd78d544ae1d2ac48f6e0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseCanvas: {fileID: 888953828}
 --- !u!1 &890957773
 GameObject:
   m_ObjectHideFlags: 0
@@ -12567,7 +12593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be908d4d1ebd33547a6a6d4371d3b1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToGo: LoadingMenu
+  sceneToGo: LoadingLvl2
+  victoryCanvas: {fileID: 826805738}
 --- !u!65 &1652503054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13446,7 +13473,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1791653494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 888953833}
+        m_TargetAssemblyTypeName: LoseCanvas, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1791653494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14143,7 +14182,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1891336371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1652503053}
+        m_TargetAssemblyTypeName: LevelPass, Assembly-CSharp
+        m_MethodName: goNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1891336371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16717,6 +16768,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4210250218826785915, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
+      propertyPath: loseCanvas
+      value: 
+      objectReference: {fileID: 888953828}
     - target: {fileID: 4480248341949629621, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
       propertyPath: m_Layer
       value: 7
