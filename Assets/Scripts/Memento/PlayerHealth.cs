@@ -120,9 +120,30 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
+        if (enemy != null)
         {
-            int damageAmount = 1;
+            int damageAmount = 0;
+
+            // Pregunta por el tipo específico de enemigo
+            if (enemy is EnemyType1)
+            {
+                damageAmount = ((EnemyType1)enemy).damage;
+                Debug.Log(damageAmount + " 1");
+            }
+            else if (enemy is EnemyType2)
+            {
+                damageAmount = ((EnemyType2)enemy).damage;
+                Debug.Log(damageAmount + " 2");
+            }
+            else if (enemy is EnemyType3)
+            {
+                damageAmount = ((EnemyType3)enemy).damage;
+                Debug.Log(damageAmount + " 3");
+            }
+
+            // Aplica el daño al jugador
             TakeDamage(damageAmount);
         }
     }

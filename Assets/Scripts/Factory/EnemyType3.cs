@@ -8,8 +8,8 @@ public class EnemyType3 : Enemy
     protected override void InitializeStats()
     {
         base.InitializeStats();
-        health = 3;
+        health = 4;
         damage = 2;
-        speed = 5f;
+        //speed = 5f;
     }
 }
