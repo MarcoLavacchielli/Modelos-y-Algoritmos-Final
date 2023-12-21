@@ -4737,6 +4737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
 --- !u!4 &562472595 stripped
@@ -6189,6 +6193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoupBowl
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8978eecc80833a34b9c6eb48be30d209, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8978eecc80833a34b9c6eb48be30d209, type: 3}
 --- !u!4 &765739913 stripped
@@ -6849,6 +6857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
 --- !u!4 &855837733 stripped
@@ -7057,6 +7069,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
       propertyPath: m_Name
       value: Plate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d82dbcffbe8f640a31aeca19a526f9, type: 3}
@@ -9246,6 +9262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ashtray
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bde82a648efeee2478546ac44e3e3156, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bde82a648efeee2478546ac44e3e3156, type: 3}
 --- !u!4 &1093160331 stripped
@@ -10134,6 +10154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Funnel3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8e552f4ecb3feab4782d72d3428d4dc2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e552f4ecb3feab4782d72d3428d4dc2, type: 3}
 --- !u!4 &1140726512 stripped
@@ -10786,6 +10810,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7cfb36689cbeba43aead963b31e3354, type: 3}
       propertyPath: m_Name
       value: HoneyDipper
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7cfb36689cbeba43aead963b31e3354, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7cfb36689cbeba43aead963b31e3354, type: 3}
@@ -11699,6 +11727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaundryStick
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dadc8cff4520d9144976cbf781a2a978, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dadc8cff4520d9144976cbf781a2a978, type: 3}
 --- !u!4 &1310719939 stripped
@@ -11970,6 +12002,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3430db9521e3de54ca1563929fb81c2b, type: 3}
       propertyPath: m_Name
       value: WoodenSpoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3430db9521e3de54ca1563929fb81c2b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3430db9521e3de54ca1563929fb81c2b, type: 3}
@@ -15930,6 +15966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenSpatula
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77ba910d98c5b1849b4a3445d775f5fd, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ba910d98c5b1849b4a3445d775f5fd, type: 3}
 --- !u!4 &1769805202 stripped
@@ -18268,6 +18308,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2ef5a43b40503ab47b6d3164db35b1a7, type: 3}
       propertyPath: m_Name
       value: Sponge3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ef5a43b40503ab47b6d3164db35b1a7, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef5a43b40503ab47b6d3164db35b1a7, type: 3}
