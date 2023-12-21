@@ -1,12 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.WSA;
 
 public class LocalizationManager : MonoBehaviour
 {
@@ -20,8 +15,6 @@ public class LocalizationManager : MonoBehaviour
     [SerializeField] private string localizationFile;
 
     public event Action OnLocalizationChanged;
-
-    //[SerializeField] private Languages[] langs;
 
     private readonly Dictionary<string, LocalizationTable> localizationTables = new();
     private LocalizationTable currentLocalizationTable;
@@ -68,25 +61,6 @@ public class LocalizationManager : MonoBehaviour
     {
         throw new NotImplementedException();
     }
-
-    /*[Serializable]
-    private struct Languages
-    {
-
-        [SerializeField]
-        public string name;
-
-        [SerializeField]
-        public Translations[] trans;
-    }
-
-    [Serializable]
-    private struct Translations
-    {
-        [SerializeField] private string key;
-
-        [SerializeField] private string value;
-    }*/
 
     private class LocalizationTable
     {
