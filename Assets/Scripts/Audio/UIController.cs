@@ -21,15 +21,6 @@ public class UIController : MonoBehaviour
             _sfxSlider.value = valorRecuperadoSFX;
         }
     }
-
-    /*public void ToggleMusic()
-    {
-        AudioManager.Instance.ToggleMusic();
-    }
-    public void ToggleSFX()
-    {
-        AudioManager.Instance.ToggleSFX();
-    }*/
     public void MusicVolume()
     {
         AudioManager.Instance.MusicVolume(_musicSlider.value);

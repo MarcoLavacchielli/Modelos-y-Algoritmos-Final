@@ -11,7 +11,7 @@ public class ScreenManager : MonoBehaviour
 
     private void Start()
     {
-        SwitchPanel(0); // Indico el panel inicial
+        SwitchPanel(0);
     }
 
     public void SwitchPanel(int index)

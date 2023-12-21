@@ -10,14 +10,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int maxHealth = 5;
     public event Action<float> OnHealthChange;
 
-    //[SerializeField] private ParticleSystem damageP;
-
-
-    //[SerializeField] private Checkpoint checkpoint;
-
-
     [SerializeField] private PlayerOriginator playerOriginator;
-    //
+
     private PlayerOriginator.PlayerMemento savedmemento;
 
     public bool failed = false;
@@ -66,35 +60,6 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-        //damageP.Play();
-        //AudioManager.Instance.PlaySFX(6);
-
-        /*if (currentHealth <= 0)
-        {
-            try
-            {
-                if (checkpoint != null && checkpoint.IsCheckpointActivated())
-                {
-                    // Reposicionar al jugador en el checkpoint y restablecer su vida
-                    transform.position = checkpoint.GetCheckpointPosition();
-                    currentHealth = maxHealth;
-                    NotifyObservers();
-                }
-                else
-                {
-                    currentHealth = 0;
-                    Respawn();
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.LogWarning("Error handling checkpoint: " + e.Message);
-            }
-        }
-        else
-        {
-            NotifyObservers();
-        }*/
 
         if (currentHealth <= 0)
         {
@@ -107,8 +72,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void Respawn()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reiniciar la escena
-        //NotifyObservers();
         loseCanvas.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -126,24 +89,19 @@ public class PlayerHealth : MonoBehaviour
         {
             int damageAmount = 0;
 
-            // Pregunta por el tipo específico de enemigo
             if (enemy is EnemyType1)
             {
                 damageAmount = ((EnemyType1)enemy).damage;
-                //Debug.Log(damageAmount + " 1");
             }
             else if (enemy is EnemyType2)
             {
                 damageAmount = ((EnemyType2)enemy).damage;
-                //Debug.Log(damageAmount + " 2");
             }
             else if (enemy is EnemyType3)
             {
                 damageAmount = ((EnemyType3)enemy).damage;
-                //Debug.Log(damageAmount + " 3");
             }
 
-            // Aplica el daño al jugador
             TakeDamage(damageAmount);
         }
     }

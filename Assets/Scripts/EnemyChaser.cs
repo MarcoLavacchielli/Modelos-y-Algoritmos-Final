@@ -32,7 +32,6 @@ public class EnemyChaser : MonoBehaviour
 
         if (playerPosition != null)
         {
-            // Asigno automaticamente al player
             player = playerPosition.transform;
         }
         else
@@ -43,10 +42,8 @@ public class EnemyChaser : MonoBehaviour
 
     private void Update()
     {
-        // calculo distancia
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        //distance se usa en caso de que tenga varios guardias asi no se rompen y van todos al pobre player
         if (distanceToPlayer <= detectionRange)
         {
             if(distanceToPlayer < chaseRange)
@@ -66,7 +63,6 @@ public class EnemyChaser : MonoBehaviour
 
     void Chase()
     {
-        //distancia hacia el player
         Vector3 direction = (player.position - transform.position).normalized;
 
         transform.Translate(direction * chaseSpeed * Time.deltaTime);
@@ -79,7 +75,6 @@ public class EnemyChaser : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        // Dibujar una esfera gizmo para representar el rango de chase
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.yellow;

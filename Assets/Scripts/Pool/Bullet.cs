@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour, IBullet
 {
-    [SerializeField] private int velocity;   //Velocidad de la bala
-    [SerializeField] public int damage;  //Daño de la vala
-    [SerializeField] private Rigidbody rb;  //Obtiene el rigid del enemigo
+    [SerializeField] private int velocity;
+    [SerializeField] public int damage;
+    [SerializeField] private Rigidbody rb;
 
     private Pool<IBullet> pool;
 
-    //[SerializeField] ParticleSystem bulletDestroyP;
     private Vector3 initialPosition;
 
     private void Start()
@@ -19,10 +18,10 @@ public class Bullet : MonoBehaviour, IBullet
         initialPosition = transform.position;
     }
 
-    public void Launch() // Lanza la bala para adelante y se tiene una funcion para devolver la bala a la bolsa luego de 7 segundos
+    public void Launch()
     {
         rb.velocity = transform.forward * velocity;
-        StartCoroutine(ReturnAfterSeconds(3f)); // Return after 7 seconds
+        StartCoroutine(ReturnAfterSeconds(3f));
     }
 
     void IBullet.SetActive(bool active) => gameObject.SetActive(active);
@@ -33,16 +32,14 @@ public class Bullet : MonoBehaviour, IBullet
 
     T IBullet.GetComponent<T>() => GetComponent<T>();
 
-    private IEnumerator ReturnAfterSeconds(float seconds) //corrutina para devolver la bala a la bolsa
+    private IEnumerator ReturnAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         gameObject.SetActive(false);
         pool.Return(this);
-
-        //PlayBulletDestroyParticles(initialPosition);
     }
 
-    private void OnCollisionEnter(Collision collision) // Se desactiva la bala cuando colisiona con algo
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -56,18 +53,5 @@ public class Bullet : MonoBehaviour, IBullet
         StopCoroutine(ReturnAfterSeconds(3f));
         gameObject.SetActive(false);
         pool.Return(this);
-
-        //PlayBulletDestroyParticles(collision.contacts[0].point);
     }
-
-    /*private void PlayBulletDestroyParticles(Vector3 position)
-    {
-        ParticleSystem bulletDestroyClone = Instantiate(bulletDestroyP, position, Quaternion.identity);
-        bulletDestroyClone.Play();
-
-        ParticleSystem.MainModule mainModule = bulletDestroyClone.main;
-        //mainModule.duration = bulletDestroyP.main.duration;
-
-        Destroy(bulletDestroyClone.gameObject, bulletDestroyP.main.duration);
-    }*/
 }

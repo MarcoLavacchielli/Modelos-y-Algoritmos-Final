@@ -75,15 +75,12 @@ public class LocalizationManager : MonoBehaviour
 
             TextAsset asset = Resources.Load<TextAsset>($"{localizationFolders}{languageFolder}/{localizationFile}");
 
-            //
             string[] lines = asset.text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // 1 porque van los titulos y salteamos eso
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] parts = lines[i].Split(';');
-                //Debug.Log($"Key {parts[0]} value {parts[1]}"); // printea
-                textTable.Add(parts[0], parts[1]); // Mucho muy importante no borrar, porque sin esto no funca esto
+                textTable.Add(parts[0], parts[1]);
             }
         }
 

@@ -22,19 +22,19 @@ public class PauseMenu : MonoBehaviour
 
         if (isPaused)
         {
-            Time.timeScale = 0f; // Pausar el tiempo en el juego
-            pauseCanvas.SetActive(true); // Mostrar el canvas de pausa
+            Time.timeScale = 0f;
+            pauseCanvas.SetActive(true);
         }
         else
         {
-            Time.timeScale = 1f; // Reanudar el tiempo en el juego
-            pauseCanvas.SetActive(false); // Ocultar el canvas de pausa
+            Time.timeScale = 1f;
+            pauseCanvas.SetActive(false);
         }
     }
 
-    public void loadscene(string scenename) //carga una escena especifica por nombre
+    public void loadscene(string scenename)
     {
-        Time.timeScale = 1f; // Reanudar el tiempo en el juego
+        Time.timeScale = 1f;
         SceneManager.LoadScene(scenename);
     }
 

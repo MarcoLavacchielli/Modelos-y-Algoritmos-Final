@@ -27,19 +27,16 @@ public class PlayerModel : MonoBehaviour
 
     private void OnEnable()
     {
-        // Suscribe al evento cuando el objeto está activo
         gameObserver.SpeedChanged += HandleVelocityChanged;
     }
 
     private void OnDisable()
     {
-        // Desuscribe al evento cuando el objeto se desactiva para evitar pérdida de referencia
         gameObserver.SpeedChanged -= HandleVelocityChanged;
     }
 
     private void HandleVelocityChanged(float amount)
     {
-        // Actualiza el daño según el evento recibido
         speed += amount;
     }
 }

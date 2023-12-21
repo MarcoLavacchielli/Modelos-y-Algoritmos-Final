@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyPatroller : MonoBehaviour
 {
-    //[SerializeField] private float speed = 5f;
     private float speed;
 
     private void Start()
@@ -39,7 +38,6 @@ public class EnemyPatroller : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //si se pega con una "wall" cambia de direccion en 180
         if (collision.gameObject.CompareTag("Wall"))
         {
             ChangeDirection();

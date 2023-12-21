@@ -14,7 +14,6 @@ public class LevelPass : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //SceneManager.LoadScene(sceneToGo);
             victoryCanvas.SetActive(true);
             Time.timeScale = 0f;
         }

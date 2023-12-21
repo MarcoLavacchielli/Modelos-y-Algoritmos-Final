@@ -17,7 +17,6 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float cooldown = 0.5f;
     private float nextAttackTime = 0f;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime && !isAttacking)

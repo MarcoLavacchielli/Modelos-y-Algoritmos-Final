@@ -13,7 +13,6 @@ public class EnChaseRt : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.LookRotation(targetOrientation);
 
-        // Limitar la rotación solo al eje Y (inclinación)
         transform.rotation = Quaternion.Euler(0f, targetRotation.eulerAngles.y, 0f);
     }
 }
