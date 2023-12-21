@@ -10,6 +10,9 @@ public class PowerUpVelocity : MonoBehaviour
     {
         other.GetComponent<GameObserver>().IncreaseSpeed(3f);
         powerVelocityPs.Play();
+
+        AudioManager.Instance.PlaySFX(2);
+
         Destroy(gameObject);
     }
 }

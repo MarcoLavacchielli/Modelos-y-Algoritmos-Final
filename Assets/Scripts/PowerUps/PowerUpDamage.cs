@@ -11,6 +11,9 @@ public class PowerUpDamage : MonoBehaviour
     {
         other.GetComponent<GameObserver>().IncreaseDamage(1);
         powerDamagePs.Play();
+
+        AudioManager.Instance.PlaySFX(2);
+
         Destroy(gameObject);
     }
 }
