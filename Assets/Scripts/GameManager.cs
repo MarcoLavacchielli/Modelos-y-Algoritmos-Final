@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public EnemyFactory enemyFactoryPrefab;
     public GameObject playerCheckerPrefab;
 
+    private EnemyFactory enemyFactoryInstance;
+
     public void SpawnEnemy(EnemyType enemyType, Vector3 spawnPosition)
     {
         if (enemyFactoryPrefab == null)
@@ -16,15 +18,15 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (enemyFactoryPrefab == null)
+        if (enemyFactoryInstance == null)
         {
-            enemyFactoryPrefab = Instantiate(enemyFactoryPrefab, Vector3.zero, Quaternion.identity);
+            enemyFactoryInstance = Instantiate(enemyFactoryPrefab, Vector3.zero, Quaternion.identity);
         }
 
-        if (enemyFactoryPrefab != null)
+        if (enemyFactoryInstance != null)
         {
             Debug.Log("Spawning enemy at position: " + spawnPosition);
-            enemyFactoryPrefab.SpawnEnemy(enemyType, spawnPosition);
+            enemyFactoryInstance.SpawnEnemy(enemyType, spawnPosition);
         }
         else
         {
