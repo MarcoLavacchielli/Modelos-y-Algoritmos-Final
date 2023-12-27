@@ -109,8 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6a06dc9e0445a45995af811f369cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPositionType1: {x: 0, y: 1, z: 10}
-  spawnPositionType2: {x: 0, y: 1, z: 0}
-  spawnPositionType3: {x: 0, y: 1, z: 0}
+  spawnPosition: {x: 1, y: 0, z: 0}
   enemyTypeToSpawn: 0
   gameManager: {fileID: 0}
