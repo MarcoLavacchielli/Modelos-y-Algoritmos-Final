@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += healthAmout;
 
-        if (currentHealth > 5)
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
