@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {x: 1, y: 0, z: 0}
-  enemyTypeToSpawn: 0
+  enemyTypeToSpawn: Type1
   gameManager: {fileID: 0}

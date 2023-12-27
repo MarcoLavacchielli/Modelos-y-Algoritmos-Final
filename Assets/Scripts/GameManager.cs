@@ -3,14 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
     public EnemyFactory enemyFactoryPrefab;
     public GameObject playerCheckerPrefab;
 
-    private EnemyFactory enemyFactoryInstance;
+    private IEnemyFactory enemyFactoryInstance;
 
-    public void SpawnEnemy(EnemyType enemyType, Vector3 spawnPosition)
+    public void SetEnemyFactory(string enemyType)
     {
         if (enemyFactoryPrefab == null)
         {
@@ -18,15 +19,23 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (enemyFactoryInstance == null)
-        {
-            enemyFactoryInstance = Instantiate(enemyFactoryPrefab, Vector3.zero, Quaternion.identity);
-        }
+        enemyFactoryInstance = enemyFactoryPrefab.GetEnemyFactory(enemyType);
+    }
 
+    public void SpawnEnemy(Vector3 spawnPosition)
+    {
         if (enemyFactoryInstance != null)
         {
-            Debug.Log("Spawning enemy at position: " + spawnPosition);
-            enemyFactoryInstance.SpawnEnemy(enemyType, spawnPosition);
+            GameObject spawnedEnemy = enemyFactoryInstance.SpawnEnemy(spawnPosition);
+
+            if (spawnedEnemy != null)
+            {
+                Debug.Log("Enemy spawned at position: " + spawnPosition);
+            }
+            else
+            {
+                Debug.LogError("Error spawning enemy");
+            }
         }
         else
         {
