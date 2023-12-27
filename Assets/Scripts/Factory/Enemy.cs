@@ -9,16 +9,6 @@ public class Enemy : MonoBehaviour
     public int damage = 1;
     public float speed = 1f;
 
-    protected virtual void Start()
-    {
-        InitializeStats();
-    }
-
-    protected virtual void InitializeStats()
-    {
-
-    }
-
     public void TakeDamage(int amount)
     {
         health -= amount;

@@ -336,9 +336,9 @@ GameObject:
   - component: {fileID: 258959271755989230}
   - component: {fileID: 7869493518961361803}
   - component: {fileID: 9084960729423675968}
-  - component: {fileID: 8418456105805566332}
   - component: {fileID: 5122789427908810392}
   - component: {fileID: 2199401917173185798}
+  - component: {fileID: 5770474686051055689}
   m_Layer: 8
   m_Name: Enemy2
   m_TagString: Enemy
@@ -426,21 +426,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: -0.5, z: 0}
---- !u!114 &8418456105805566332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6741910434230434067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52c73d3097e123347be27ef9601880f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  damage: 2
-  speed: 3.5
 --- !u!54 &5122789427908810392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -472,6 +457,21 @@ MonoBehaviour:
   detectionRange: 15
   chaseRange: 10
   returnSpeed: 1
+--- !u!114 &5770474686051055689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741910434230434067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9480216e1188c48858ed33ac652eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  damage: 2
+  speed: 3.5
 --- !u!1 &6947263670587310693
 GameObject:
   m_ObjectHideFlags: 0

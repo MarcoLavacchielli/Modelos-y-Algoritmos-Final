@@ -8,7 +8,7 @@ public class EnemyPatroller : MonoBehaviour
 
     private void Start()
     {
-        EnemyType1 enemyType1Component = GetComponent<EnemyType1>();
+        Enemy enemyType1Component = GetComponent<Enemy>();
         if (enemyType1Component != null)
         {
             speed = enemyType1Component.speed;

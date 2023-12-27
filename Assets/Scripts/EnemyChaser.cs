@@ -16,7 +16,7 @@ public class EnemyChaser : MonoBehaviour
     private void Start()
     {
 
-        EnemyType2 enemyType2Component = GetComponent<EnemyType2>();
+        Enemy enemyType2Component = GetComponent<Enemy>();
         if (enemyType2Component != null)
         {
             chaseSpeed = enemyType2Component.speed;

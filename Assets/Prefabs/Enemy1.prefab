@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6822497765629554687}
   - component: {fileID: 5923398974180994469}
   - component: {fileID: 7843252579445637210}
-  - component: {fileID: 3595444268905484708}
   - component: {fileID: 2406760166943223611}
   - component: {fileID: 3124694045309634725}
+  - component: {fileID: 7294139141042513568}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
@@ -102,21 +102,6 @@ CapsuleCollider:
   m_Height: 1.3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3595444268905484708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201629226635769708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7048c525012926f41b37a18d2860dc4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
-  damage: 1
-  speed: 5
 --- !u!54 &2406760166943223611
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,6 +130,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7575af59771d9744fa8a9118d7396283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7294139141042513568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201629226635769708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9480216e1188c48858ed33ac652eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  damage: 1
+  speed: 5
 --- !u!1001 &4000139048501535886
 PrefabInstance:
   m_ObjectHideFlags: 0

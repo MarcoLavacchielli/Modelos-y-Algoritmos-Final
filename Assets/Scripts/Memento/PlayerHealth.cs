@@ -89,19 +89,6 @@ public class PlayerHealth : MonoBehaviour
         {
             int damageAmount = 0;
 
-            if (enemy is EnemyType1)
-            {
-                damageAmount = ((EnemyType1)enemy).damage;
-            }
-            else if (enemy is EnemyType2)
-            {
-                damageAmount = ((EnemyType2)enemy).damage;
-            }
-            else if (enemy is EnemyType3)
-            {
-                damageAmount = ((EnemyType3)enemy).damage;
-            }
-
             TakeDamage(damageAmount);
         }
     }
