@@ -6,22 +6,22 @@ using UnityEngine.UI;
 
 public class LoadingLevels : MonoBehaviour
 {
-    public Slider barraProgreso;
-    public string nombreEscena;
+    public Slider loadingBar;
+    public string sceneToGo;
 
     private void Start()
     {
-        StartCoroutine(CargarJuego(nombreEscena));
+        StartCoroutine(LoadGame(sceneToGo));
     }
 
-    private IEnumerator CargarJuego(string nombreEscena)
+    private IEnumerator LoadGame(string nombreEscena)
     {
         AsyncOperation cargaOperacion = SceneManager.LoadSceneAsync(nombreEscena);
 
         while (!cargaOperacion.isDone)
         {
             float progreso = Mathf.Clamp01(cargaOperacion.progress / 0.9f);
-            barraProgreso.value = progreso;
+            loadingBar.value = progreso;
             yield return null;
         }
         SceneManager.LoadScene(nombreEscena);

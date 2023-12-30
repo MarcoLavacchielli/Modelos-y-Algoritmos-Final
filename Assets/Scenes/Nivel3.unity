@@ -691,8 +691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8.3
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &31346673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4989,7 +4989,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1968192317}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: loadscene
+        m_MethodName: Loadscene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7132,8 +7132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8.3
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &540621161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7335,9 +7335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef6169b82edd154f9e706893bf0db98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType1Prefab: {fileID: 201629226635769708, guid: 359a5c7bcc6e4724c8713f4fcde478ca, type: 3}
-  enemyType2Prefab: {fileID: 6741910434230434067, guid: 779f589e00fcade46bf707333d8e926e, type: 3}
-  enemyType3Prefab: {fileID: 904532673499116303, guid: 4014ba94672066e4d993f243341e1ec0, type: 3}
+  enemyType1Factory: {fileID: 0}
+  enemyType2Factory: {fileID: 0}
+  enemyType3Factory: {fileID: 0}
 --- !u!1 &544902346
 GameObject:
   m_ObjectHideFlags: 0
@@ -13451,8 +13451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8.3
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &967099426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13566,8 +13566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aab7de593494d64c8e707add3455974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoVida: {fileID: 2142070385}
-  vidaMaxima: 5
+  textLife: {fileID: 0}
+  maxHealth: 5
 --- !u!1 &990827147
 GameObject:
   m_ObjectHideFlags: 0
@@ -17860,7 +17860,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1652503053}
         m_TargetAssemblyTypeName: LevelPass, Assembly-CSharp
-        m_MethodName: goNext
+        m_MethodName: GoNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20810,8 +20810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 13
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &1335463313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21101,8 +21101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8.3
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &1344179961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22945,8 +22945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 13
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &1459004407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24507,8 +24507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8.3
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &1543181620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26114,8 +26114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 10
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!1001 &1645762355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26941,8 +26941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8.3
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &1697913880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28084,8 +28084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 13
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &1820746475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30203,8 +30203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc64a61898e8b2419be5c4cbaba0c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicSlider: {fileID: 387811400}
-  _sfxSlider: {fileID: 653644792}
+  musicSlider: {fileID: 387811400}
+  sfxSlider: {fileID: 653644792}
 --- !u!1 &1974912538
 GameObject:
   m_ObjectHideFlags: 0
@@ -32274,8 +32274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 8
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &2089765379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32371,8 +32371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 13
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!65 &2097688931
 BoxCollider:
   m_ObjectHideFlags: 0

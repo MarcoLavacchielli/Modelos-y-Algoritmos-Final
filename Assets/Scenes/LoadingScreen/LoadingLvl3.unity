@@ -398,8 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81355361a586ae4d9430aa5e32c8944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barraProgreso: {fileID: 1875800713}
-  nombreEscena: Nivel3
+  loadingBar: {fileID: 1875800713}
+  sceneToGo: Nivel3
 --- !u!4 &670516154
 Transform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VisualRotation : MonoBehaviour
 {
-    private Transform _target;
+    private Transform target;
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class VisualRotation : MonoBehaviour
         if (player != null)
         {
             // Encuentra el objeto
-            _target = player.transform.Find("AimSpot");
+            target = player.transform.Find("AimSpot");
         }
         else
         {
@@ -24,7 +24,7 @@ public class VisualRotation : MonoBehaviour
 
     void Update()
     {
-        Vector3 targetOrientation = _target.position - transform.position;
+        Vector3 targetOrientation = target.position - transform.position;
         Debug.DrawRay(transform.position, targetOrientation, Color.red);
 
         Quaternion targetRotation = Quaternion.LookRotation(targetOrientation);

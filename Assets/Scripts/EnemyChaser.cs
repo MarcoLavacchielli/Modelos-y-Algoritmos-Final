@@ -52,12 +52,12 @@ public class EnemyChaser : MonoBehaviour
             }
             else
             {
-                returnOGPosition();
+                ReturnOGPosition();
             }
         }
         else
         {
-            returnOGPosition();
+            ReturnOGPosition();
         }
     }
 
@@ -68,7 +68,7 @@ public class EnemyChaser : MonoBehaviour
         transform.Translate(direction * chaseSpeed * Time.deltaTime);
     }
 
-    void returnOGPosition()
+    private void ReturnOGPosition()
     {
         transform.position = Vector3.MoveTowards(transform.position, ogPosition, returnSpeed * Time.deltaTime);
     }

@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class LifeTextHud : MonoBehaviour
 {
-    [SerializeField] private Text textoVida;
-    [SerializeField] private float vidaMaxima = 5f;
-    private float vidaActual;
+    [SerializeField] private Text textLife;
+    [SerializeField] private float maxHealth = 5f;
+    private float actualLife;
 
     void Start()
     {
-        vidaActual = vidaMaxima;
-        ActualizarInterfazVida();
+        actualLife = maxHealth;
+        UpdateInterfaceLife();
 
         PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
         if (playerHealth != null)
@@ -33,29 +33,29 @@ public class LifeTextHud : MonoBehaviour
 
     public void OnHealthChanged(float health)
     {
-        vidaActual = health;
-        ActualizarInterfazVida();
+        actualLife = health;
+        UpdateInterfaceLife();
     }
 
-    public void ReducirVida(float cantidad)
+    public void ReduceHealth(float cantidad)
     {
-        vidaActual -= cantidad;
-        ActualizarInterfazVida();
+        actualLife -= cantidad;
+        UpdateInterfaceLife();
     }
 
-    public void AumentarVida(float cantidad)
+    public void IncreaseHealth(float cantidad)
     {
-        vidaActual += cantidad;
-        if (vidaActual > vidaMaxima)
+        actualLife += cantidad;
+        if (actualLife > maxHealth)
         {
-            vidaActual = vidaMaxima;
+            actualLife = maxHealth;
         }
-        ActualizarInterfazVida();
+        UpdateInterfaceLife();
     }
 
-    private void ActualizarInterfazVida()
+    private void UpdateInterfaceLife()
     {
-        float porcentajeVida = vidaActual / vidaMaxima;
-        textoVida.text = $"Hp: {vidaActual}/{vidaMaxima}";
+        float porcentajeVida = actualLife / maxHealth;
+        textLife.text = $"Hp: {actualLife}/{maxHealth}";
     }
 }

@@ -42,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
         isAttacking = false;
     }
 
-    void Attack()
+    private void Attack()
     {
         Collider[] hitEnemies = Physics.OverlapSphere(transform.position, attackRadius, enemyLayer);
         attackPs.Play();

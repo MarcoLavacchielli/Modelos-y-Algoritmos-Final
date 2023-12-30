@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AimRotation : MonoBehaviour
 {
-    private Transform _target;
+    private Transform target;
 
     void Start()
     {
@@ -12,7 +12,7 @@ public class AimRotation : MonoBehaviour
 
         if (player != null)
         {
-            _target = player.transform.Find("AimSpot");
+            target = player.transform.Find("AimSpot");
         }
         else
         {
@@ -22,7 +22,7 @@ public class AimRotation : MonoBehaviour
 
     void Update()
     {
-        Vector3 targetOrientation = _target.position - transform.position;
+        Vector3 targetOrientation = target.position - transform.position;
         Debug.DrawRay(transform.position, targetOrientation, Color.red);
 
 

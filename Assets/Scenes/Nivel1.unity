@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10605908, g: 0.42195532, b: 0.67115754, a: 1}
+  m_IndirectSpecularColor: {r: 0.10604586, g: 0.4219543, b: 0.67115384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -870,7 +870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &110859287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,7 +1439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &148998647
 Transform:
   m_ObjectHideFlags: 0
@@ -2859,7 +2859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &311359218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3286,7 +3286,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1968192317}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: loadscene
+        m_MethodName: Loadscene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7079,7 +7079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &861346560
 Transform:
   m_ObjectHideFlags: 0
@@ -8047,7 +8047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &912240624
 Transform:
   m_ObjectHideFlags: 0
@@ -8328,8 +8328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aab7de593494d64c8e707add3455974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoVida: {fileID: 2142070385}
-  vidaMaxima: 5
+  textLife: {fileID: 2142070385}
+  maxHealth: 5
 --- !u!1 &982061737
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,7 +9524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 56654b860e66b694391fc3ba3581f6dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56654b860e66b694391fc3ba3581f6dc, type: 3}
@@ -9789,7 +9789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1161245747
 Transform:
   m_ObjectHideFlags: 0
@@ -9821,7 +9821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1607545215762254281, guid: bfb26c0533853bc4e90e071642377b9b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1607545215762254285, guid: bfb26c0533853bc4e90e071642377b9b, type: 3}
       propertyPath: m_RootOrder
@@ -11979,7 +11979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1450209111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12466,7 +12466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1487589198
 Transform:
   m_ObjectHideFlags: 0
@@ -12699,7 +12699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1510430076
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13822,7 +13822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1644756696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13914,8 +13914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 11
-  alturaPermitida: 0.1
+  jumpForce: 10
+  maxHeight: 0.1
 --- !u!1 &1648092279
 GameObject:
   m_ObjectHideFlags: 0
@@ -14181,7 +14181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1652503053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14639,7 +14639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1718482356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15340,7 +15340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1836040637
 Transform:
   m_ObjectHideFlags: 0
@@ -15815,7 +15815,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1652503053}
         m_TargetAssemblyTypeName: LevelPass, Assembly-CSharp
-        m_MethodName: goNext
+        m_MethodName: GoNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16677,7 +16677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1607545215762254281, guid: bfb26c0533853bc4e90e071642377b9b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1607545215762254285, guid: bfb26c0533853bc4e90e071642377b9b, type: 3}
       propertyPath: m_RootOrder
@@ -16924,7 +16924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1968192313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17032,8 +17032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc64a61898e8b2419be5c4cbaba0c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicSlider: {fileID: 387811400}
-  _sfxSlider: {fileID: 653644792}
+  musicSlider: {fileID: 387811400}
+  sfxSlider: {fileID: 653644792}
 --- !u!1 &1972309998
 GameObject:
   m_ObjectHideFlags: 0
@@ -17834,7 +17834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2055844205
 Transform:
   m_ObjectHideFlags: 0
@@ -18807,7 +18807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1607545215762254281, guid: bfb26c0533853bc4e90e071642377b9b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1607545215762254285, guid: bfb26c0533853bc4e90e071642377b9b, type: 3}
       propertyPath: m_RootOrder
@@ -19225,7 +19225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4510271843240209362, guid: 9b830f64df8927b4e81b8290162c571a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4510271843240209374, guid: 9b830f64df8927b4e81b8290162c571a, type: 3}
       propertyPath: m_RootOrder
@@ -19395,7 +19395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6635064682743420718, guid: fb8a77dc96ae7d54aa118c04a211982e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb8a77dc96ae7d54aa118c04a211982e, type: 3}

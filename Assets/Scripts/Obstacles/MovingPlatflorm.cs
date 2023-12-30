@@ -43,23 +43,23 @@ public class MovingPlatflorm : MonoBehaviour
             else
             {
                 isWaiting = true;
-                StartCoroutine(changeDelay());
+                StartCoroutine(ChangeDelay());
             }
         }
 
     }
 
-    void changeDestination()
+    void ChangeDestination()
     {
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
         departTarget = destinationTarget;
         destinationTarget = waypoints[currentWaypointIndex];
     }
 
-    IEnumerator changeDelay()
+    IEnumerator ChangeDelay()
     {
         yield return new WaitForSeconds(changeDirectionDelay);
-        changeDestination();
+        ChangeDestination();
         startTime = Time.time;
         journeyLength = Vector3.Distance(departTarget.position, destinationTarget.position);
         isWaiting = false;

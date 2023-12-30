@@ -19,7 +19,7 @@ public class LevelPass : MonoBehaviour
         }
     }
 
-    public void goNext()
+    public void GoNext()
     {
         Time.timeScale = 1f;
         victoryCanvas.SetActive(false);

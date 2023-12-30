@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FireBullets : MonoBehaviour
 {
-    [SerializeField] private float _timer = 2f;
-    [SerializeField] private float _range = 10f;
+    [SerializeField] private float timer = 2f;
+    [SerializeField] private float range = 10f;
 
-    [SerializeField] private int _counter;
-    [SerializeField] private int _maxCounter = 20;
+    [SerializeField] private int counter;
+    [SerializeField] private int maxCounter = 20;
 
-    private Transform _player;
-    private Coroutine _fireCoroutine;
+    private Transform player;
+    private Coroutine fireCoroutine;
 
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform shootController;
@@ -34,28 +34,28 @@ public class FireBullets : MonoBehaviour
 
         if (player != null)
         {
-            _player = player.transform;
+            this.player = player.transform;
         }
     }
 
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, _player.position);
+        float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= _range)
+        if (distance <= range)
         {
-            if (_fireCoroutine == null)
+            if (fireCoroutine == null)
             {
-                _fireCoroutine = StartCoroutine(FireBullets_CR());
+                fireCoroutine = StartCoroutine(FireBullets_CR());
 
             }
         }
         else
         {
-            if (_fireCoroutine != null)
+            if (fireCoroutine != null)
             {
-                StopCoroutine(_fireCoroutine);
-                _fireCoroutine = null;
+                StopCoroutine(fireCoroutine);
+                fireCoroutine = null;
 
             }
         }
@@ -66,13 +66,13 @@ public class FireBullets : MonoBehaviour
         Debug.Log("Inicio coroutine");
         yield return new WaitForSeconds(0.5f);
 
-        for (int i = 0; i < _maxCounter; i++)
+        for (int i = 0; i < maxCounter; i++)
         {
             yield return new WaitForSeconds(0.2f);
 
             Shoot();
 
-            yield return new WaitForSeconds(_timer);
+            yield return new WaitForSeconds(timer);
         }
 
 
@@ -82,7 +82,7 @@ public class FireBullets : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, _range);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
     private void Shoot()
