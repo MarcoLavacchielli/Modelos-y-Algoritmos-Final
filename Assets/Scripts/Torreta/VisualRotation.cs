@@ -8,13 +8,11 @@ public class VisualRotation : MonoBehaviour
 
     void Start()
     {
-        // Busco al player
-        GameObject player = GameObject.FindWithTag("Player");
+        PlayerController playerController = FindObjectOfType<PlayerController>();
 
-        if (player != null)
+        if (playerController != null)
         {
-            // Encuentra el objeto
-            target = player.transform.Find("AimSpot");
+            target = playerController.transform.Find("AimSpot");
         }
         else
         {
@@ -24,12 +22,16 @@ public class VisualRotation : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+        {
+            return;
+        }
+
         Vector3 targetOrientation = target.position - transform.position;
         Debug.DrawRay(transform.position, targetOrientation, Color.red);
 
         Quaternion targetRotation = Quaternion.LookRotation(targetOrientation);
 
-        // Limitar la rotación en el eje Y (inclinación)
         targetRotation.eulerAngles = new Vector3(0f, targetRotation.eulerAngles.y, 0f);
 
         transform.rotation = targetRotation;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyPatroller : MonoBehaviour
 {
+    [SerializeField] private LayerMask wall;
     private float speed;
 
     private void Start()
@@ -38,7 +39,7 @@ public class EnemyPatroller : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.layer == wall)
         {
             ChangeDirection();
         }

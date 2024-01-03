@@ -9,7 +9,7 @@ public class Trampoline : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.GetComponent("PlayerController"))
         {
             float jugadorPosY = other.transform.position.y;
             float trampolinPosY = transform.position.y;

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private LayerMask floor;
     private PlayerModel playerModel;
     private PlayerView playerView;
 
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.layer == floor)
         {
             jumpsRemaining = playerModel.maxJumps;
         }

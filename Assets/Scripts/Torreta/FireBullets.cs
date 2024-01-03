@@ -12,6 +12,7 @@ public class FireBullets : MonoBehaviour
 
     private Transform player;
     private Coroutine fireCoroutine;
+    private PlayerController playerController;
 
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform shootController;
@@ -30,33 +31,34 @@ public class FireBullets : MonoBehaviour
 
     private void Start()
     {
-        GameObject player = GameObject.FindWithTag("Player");
+        playerController = FindObjectOfType<PlayerController>();
 
-        if (player != null)
+        if (playerController == null)
         {
-            this.player = player.transform;
+            Debug.LogError("Falla al encontrar el PlayerController");
         }
     }
 
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-
-        if (distance <= range)
+        if (playerController != null)
         {
-            if (fireCoroutine == null)
-            {
-                fireCoroutine = StartCoroutine(FireBullets_CR());
+            float distance = Vector3.Distance(transform.position, playerController.transform.position);
 
+            if (distance <= range)
+            {
+                if (fireCoroutine == null)
+                {
+                    fireCoroutine = StartCoroutine(FireBullets_CR());
+                }
             }
-        }
-        else
-        {
-            if (fireCoroutine != null)
+            else
             {
-                StopCoroutine(fireCoroutine);
-                fireCoroutine = null;
-
+                if (fireCoroutine != null)
+                {
+                    StopCoroutine(fireCoroutine);
+                    fireCoroutine = null;
+                }
             }
         }
     }

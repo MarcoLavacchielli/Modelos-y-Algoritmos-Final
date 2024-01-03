@@ -15,7 +15,7 @@ public class PlayerChecker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponent("PlayerController"))
         {
             Vector3 spawnPosition = GetSpawnPosition();
             Debug.Log("Player detected. Enemy type to spawn: " + enemyTypeToSpawn);

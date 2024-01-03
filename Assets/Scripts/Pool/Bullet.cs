@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour, IBullet
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.GetComponent("PlayerController"))
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)

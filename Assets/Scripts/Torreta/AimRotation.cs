@@ -8,11 +8,11 @@ public class AimRotation : MonoBehaviour
 
     void Start()
     {
-        GameObject player = GameObject.FindWithTag("Player");
+        PlayerController playerController = FindObjectOfType<PlayerController>();
 
-        if (player != null)
+        if (playerController != null)
         {
-            target = player.transform.Find("AimSpot");
+            target = playerController.transform.Find("AimSpot");
         }
         else
         {
@@ -22,15 +22,17 @@ public class AimRotation : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+        {
+            return;
+        }
+
         Vector3 targetOrientation = target.position - transform.position;
         Debug.DrawRay(transform.position, targetOrientation, Color.red);
 
-
-        //slerp
         Quaternion targetOrientationQuaternion = Quaternion.LookRotation(targetOrientation);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetOrientationQuaternion, Time.deltaTime);
 
-        transform.rotation = Quaternion.LookRotation(targetOrientation);
-
+        // transform.rotation = Quaternion.LookRotation(targetOrientation);
     }
 }

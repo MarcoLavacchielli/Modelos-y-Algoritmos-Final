@@ -8,7 +8,7 @@ public class FailZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.GetComponent("PlayerController"))
         {
             playerHp.failed = true;
         }

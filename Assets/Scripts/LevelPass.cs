@@ -12,7 +12,7 @@ public class LevelPass : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.GetComponent("PlayerController"))
         {
             victoryCanvas.SetActive(true);
             Time.timeScale = 0f;

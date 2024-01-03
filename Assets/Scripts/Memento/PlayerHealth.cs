@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int currentHealth;
     [SerializeField] private int maxHealth = 5;
+    [SerializeField] private LayerMask checkPoint;
     public event Action<float> OnHealthChange;
 
     [SerializeField] private PlayerOriginator playerOriginator;
@@ -95,7 +96,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("CheckPoint"))
+        if (other.gameObject.layer == checkPoint)
         {
             this.savedmemento = playerOriginator.Save();
         }
