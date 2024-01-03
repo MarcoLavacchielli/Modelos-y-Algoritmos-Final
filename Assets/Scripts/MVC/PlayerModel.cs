@@ -12,10 +12,13 @@ public class PlayerModel : MonoBehaviour
 
     private int jumpsRemaining;
 
+    private PlayerView playerView;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         jumpsRemaining = maxJumps;
+        playerView = GetComponent<PlayerView>();
     }
 
     public void HandleMovement(Vector3 moveDirection)
@@ -29,6 +32,8 @@ public class PlayerModel : MonoBehaviour
         }
 
         Move(moveDirection);
+
+        playerView.UpdateMovement(moveDirection);
     }
 
     public void HandleJump(bool jumpInput)
@@ -37,6 +42,11 @@ public class PlayerModel : MonoBehaviour
         {
             Jump();
             jumpsRemaining--;
+            playerView.UpdateJump(jumpInput);
+        }
+        else
+        {
+            playerView.UpdateJump(false);
         }
     }
 

@@ -4,12 +4,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private LayerMask floor;
     private PlayerModel playerModel;
-    private PlayerView playerView;
 
     private void Start()
     {
         playerModel = GetComponent<PlayerModel>();
-        playerView = GetComponent<PlayerView>();
     }
 
     private void Update()
