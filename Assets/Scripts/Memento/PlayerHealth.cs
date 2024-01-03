@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (enemy != null)
         {
-            int damageAmount = 0;
+            int damageAmount = enemy.damage;
 
             TakeDamage(damageAmount);
         }
