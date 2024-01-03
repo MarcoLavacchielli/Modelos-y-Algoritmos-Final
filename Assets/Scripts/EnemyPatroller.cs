@@ -39,7 +39,7 @@ public class EnemyPatroller : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == wall)
+        if (wall == (wall | (1 << collision.gameObject.layer)))
         {
             ChangeDirection();
         }

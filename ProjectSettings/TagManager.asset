@@ -18,8 +18,8 @@ TagManager:
   - Floor
   - Player
   - Enemy
-  - 
-  - 
+  - Wall
+  - CheckPoint
   - 
   - 
   - 

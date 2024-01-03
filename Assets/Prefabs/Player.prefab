@@ -194,6 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a1ad6e5b75c6b47addb5a6e48a896f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floor:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &7182979001120684260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 5
+  checkPoint:
+    serializedVersion: 2
+    m_Bits: 1024
   playerOriginator: {fileID: 7182979001120684260}
   failed: 0
   loseCanvas: {fileID: 0}

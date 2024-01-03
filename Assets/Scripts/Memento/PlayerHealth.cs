@@ -96,7 +96,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == checkPoint)
+        if (checkPoint == (checkPoint | (1 << other.gameObject.layer)))
         {
             this.savedmemento = playerOriginator.Save();
         }

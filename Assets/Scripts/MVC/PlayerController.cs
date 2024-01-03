@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == floor)
+        if (floor == (floor | (1 << collision.gameObject.layer)))
         {
             jumpsRemaining = playerModel.maxJumps;
         }
