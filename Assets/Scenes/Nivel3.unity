@@ -135,6 +135,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -8.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 35.79
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 240.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -8
       objectReference: {fileID: 0}
@@ -2621,6 +2633,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -11.85
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 35.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 252.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -14
       objectReference: {fileID: 0}
@@ -2924,6 +2948,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -12.95
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 34.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 212.79
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -16
@@ -3915,6 +3951,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -7.34
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 34.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 201.37
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -10
       objectReference: {fileID: 0}
@@ -4297,6 +4345,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -12.95
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 34.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 220.19
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -13
@@ -5683,6 +5743,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 18.6709
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 44.467
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type3
@@ -8896,6 +8968,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 129.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type2
       objectReference: {fileID: 0}
@@ -10543,6 +10627,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -7.38
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 26.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 64.65
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -7.5
       objectReference: {fileID: 0}
@@ -11664,6 +11760,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -12.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 34.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 228.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -10
       objectReference: {fileID: 0}
@@ -11795,6 +11903,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 18.09
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 32.25
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -5
@@ -14988,6 +15108,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -13.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 129.73
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type2
@@ -19333,6 +19465,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -6.91
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 125.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type3
       objectReference: {fileID: 0}
@@ -19858,6 +20002,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 17.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 23.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: 1
       objectReference: {fileID: 0}
@@ -20351,6 +20507,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -6.91
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 133.56
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type2
@@ -21358,6 +21526,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -13.16
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 34.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 183.55
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: spawnPositionType1.x
       value: -13
@@ -23984,7 +24164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510430075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 35, z: 245}
+  m_LocalPosition: {x: -13.16, y: 34.98, z: 183.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29861,6 +30041,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186952174}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -13.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 120.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type2
       objectReference: {fileID: 0}
@@ -31350,6 +31542,18 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 186952174}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.x
+      value: -1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.y
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
+      propertyPath: spawnPosition.z
+      value: 120.48
+      objectReference: {fileID: 0}
     - target: {fileID: -5114423375591787225, guid: 535ad339ba11cf04d80c375fd0abe7ac, type: 3}
       propertyPath: enemyTypeToSpawn
       value: Type2
