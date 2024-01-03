@@ -10,19 +10,49 @@ public class PlayerModel : MonoBehaviour
 
     [SerializeField] private GameObserver gameObserver;
 
+    private int jumpsRemaining;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        jumpsRemaining = maxJumps;
     }
 
-    public void Move(Vector3 moveDirection)
+    public void HandleMovement(Vector3 moveDirection)
+    {
+        if (moveDirection != Vector3.zero)
+        {
+            float rotationSpeed = 15f;
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            Quaternion newRotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(newRotation);
+        }
+
+        Move(moveDirection);
+    }
+
+    public void HandleJump(bool jumpInput)
+    {
+        if (jumpInput && jumpsRemaining > 0)
+        {
+            Jump();
+            jumpsRemaining--;
+        }
+    }
+
+    private void Move(Vector3 moveDirection)
     {
         rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
     }
 
-    public void Jump()
+    private void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+    }
+
+    public void ResetJumps()
+    {
+        jumpsRemaining = maxJumps;
     }
 
     private void OnEnable()
