@@ -8,22 +8,9 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int currentHealth;
     [SerializeField] private int maxHealth = 5;
-    [SerializeField] private LayerMask checkPoint;
     public event Action<float> OnHealthChange;
 
-    [SerializeField] private PlayerOriginator playerOriginator;
-
-    private PlayerOriginator.PlayerMemento savedmemento;
-
-    public bool failed = false;
-
     [SerializeField] private GameObject loseCanvas;
-
-    private void Awake()
-    {
-        this.savedmemento = playerOriginator.Save();
-        //Debug.Log("buena salvada");
-    }
 
     public float CurrentHealth
     {
@@ -34,16 +21,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         NotifyObservers();
-    }
-
-    private void Update()
-    {
-        if (failed == true)
-        {
-            playerOriginator.Restore(savedmemento);
-            failed = false;
-            TakeDamage(1);
-        }
     }
 
     public void Health(int healthAmout)
@@ -91,14 +68,6 @@ public class PlayerHealth : MonoBehaviour
             int damageAmount = enemy.damage;
 
             TakeDamage(damageAmount);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (checkPoint == (checkPoint | (1 << other.gameObject.layer)))
-        {
-            this.savedmemento = playerOriginator.Save();
         }
     }
 }

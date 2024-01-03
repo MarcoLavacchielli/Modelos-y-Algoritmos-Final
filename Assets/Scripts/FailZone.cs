@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class FailZone : MonoBehaviour
 {
-    [SerializeField] private PlayerHealth playerHp;
+    [SerializeField] private PlayerCheckPointManager playerCheck;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent("PlayerController"))
         {
-            playerHp.failed = true;
+            playerCheck.failed = true;
         }
     }
 }
