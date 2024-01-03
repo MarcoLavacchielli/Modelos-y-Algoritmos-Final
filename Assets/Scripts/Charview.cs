@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Charview : MonoBehaviour
 {
-    public Animator myAnim;
+    private Animator myAnim;
 
     private void Awake()
     {
