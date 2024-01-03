@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -31,8 +28,6 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-
-
         }
 
         else
@@ -45,8 +40,6 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(musicaIndex);
     }
-
-
 
     public void PlayMusic(int index)
     {

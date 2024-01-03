@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AimRotation : MonoBehaviour
@@ -32,7 +30,5 @@ public class AimRotation : MonoBehaviour
 
         Quaternion targetOrientationQuaternion = Quaternion.LookRotation(targetOrientation);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetOrientationQuaternion, Time.deltaTime);
-
-        // transform.rotation = Quaternion.LookRotation(targetOrientation);
     }
 }

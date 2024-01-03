@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class LocalizationManager : MonoBehaviour
 {
-    
     public static LocalizationManager Instance { get; private set; }
 
     [SerializeField] private string defaultLanguageFolder;

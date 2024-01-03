@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBullets : MonoBehaviour
@@ -10,7 +9,6 @@ public class FireBullets : MonoBehaviour
     [SerializeField] private int counter;
     [SerializeField] private int maxCounter = 20;
 
-    private Transform player;
     private Coroutine fireCoroutine;
     private PlayerController playerController;
 
