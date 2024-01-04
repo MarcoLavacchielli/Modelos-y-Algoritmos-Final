@@ -5,10 +5,10 @@ public class PlayerChecker : MonoBehaviour
     [SerializeField]
     private Vector3 spawnPosition = new Vector3(1f, 0f, 0f);
 
-    public string enemyTypeToSpawn = "Type1";
-    public GameManager gameManager;
+    [SerializeField] private string enemyTypeToSpawn = "Type1";
+    [SerializeField] private GameManager gameManager;
 
-    public void Initialize(GameManager manager)
+    private void Initialize(GameManager manager)
     {
         gameManager = manager;
     }
