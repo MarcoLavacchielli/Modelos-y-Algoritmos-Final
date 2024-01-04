@@ -4658,7 +4658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1653671582}
-  distance: 5
+  distance: 5.5
   angle: 30
   yOffset: 0
 --- !u!4 &559757224 stripped
@@ -13978,7 +13978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 11
   maxHeight: 0.1
 --- !u!1 &1648092279
 GameObject:
@@ -19277,6 +19277,10 @@ PrefabInstance:
     - target: {fileID: 9144494666744188338, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162939360041664512, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
+      propertyPath: attackRadius
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 9162939360041664512, guid: 71767d4a68a8eb14fbea68f0ae43e228, type: 3}
       propertyPath: damageObserver

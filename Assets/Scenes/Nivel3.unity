@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &31346673
 BoxCollider:
@@ -7208,7 +7208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &540621161
 BoxCollider:
@@ -7790,8 +7790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1653671582}
-  distance: 6
-  angle: 30
+  distance: 6.5
+  angle: 25
   yOffset: 0
 --- !u!1 &559887886
 GameObject:
@@ -13528,7 +13528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &967099426
 BoxCollider:
@@ -21007,7 +21007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 14
   maxHeight: 0.1
 --- !u!65 &1335463313
 BoxCollider:
@@ -21298,7 +21298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &1344179961
 BoxCollider:
@@ -23154,7 +23154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 13
   maxHeight: 0.1
 --- !u!65 &1459004407
 BoxCollider:
@@ -24716,7 +24716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &1543181620
 BoxCollider:
@@ -27143,7 +27143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &1697913880
 BoxCollider:
@@ -28286,7 +28286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 13
   maxHeight: 0.1
 --- !u!65 &1820746475
 BoxCollider:
@@ -32500,7 +32500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 9
   maxHeight: 0.1
 --- !u!65 &2089765379
 BoxCollider:
@@ -32597,7 +32597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f553333e3a3d6e43bf7b7161020758e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 13.5
   maxHeight: 0.1
 --- !u!65 &2097688931
 BoxCollider:
